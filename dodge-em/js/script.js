@@ -5,7 +5,7 @@ Claire Amirault
 Cart 253B
 
 */
-//objects + vars
+//objects
 let bg ={
    r:0,
    g:0,
@@ -37,7 +37,9 @@ function setup() {
    noCursor();
    //set the value ONCE at the start
    covid19.y=random(720);
+
    };
+
 
 
 function draw() {
@@ -66,25 +68,36 @@ function draw() {
    fill(229,204,255);
    ellipse(covid19.x,covid19.y,covid19.size,covid19.size);
 
+
    //draw user mouse
    noStroke();
    fill(0,204,0);
    ellipse(mouseX,mouseY,user.size,user.size);
 
 
-   //dot intersection
 
+   //dot intersection
    let d = int(dist(covid19.x,covid19.y,mouseX,mouseY));
+
+   ////
+   if (d <= covid19.size/1.2 + user.size/1.2){
+     fill(255,128,0);
+     ellipse(mouseX,mouseY,user.size,user.size);
+   };
+   ///
+
    if(d <= covid19.size/2 + user.size/2){
      noLoop();
+
 
      fill(250);
      textAlign(CENTER);
      textSize(40);
      text("You're FIRED From NASA, your final paycheck: $"+ covid19.speed,bg.w/2,bg.h/2)
    };
+};
+
 
 
 
    console.log(d);
-   }

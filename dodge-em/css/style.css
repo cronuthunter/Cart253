@@ -8,6 +8,9 @@ using the CSS Grid.
 Also hides overflow.
 
 **********************************************/
+header{
+  color: #CC99FF;
+}
 
 body {
   padding: 0;
@@ -17,4 +20,6 @@ body {
   align-content: center;
   height: 100vh; /* Body is the height of the viewport */
   overflow: hidden; /* Hide anything that goes off the window size */
+  background-color: #000000;
+
 }
