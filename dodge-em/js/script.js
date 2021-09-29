@@ -5,6 +5,7 @@ Claire Amirault
 Cart 253B
 
 */
+//objects + vars
 let bg ={
    r:0,
    g:0,
@@ -25,6 +26,10 @@ let bg ={
    size: 100,
    rgb:250,
    };
+
+//elipse start
+var x = 200;
+var y = 200;
 ///////////////////
 function setup() {
    createCanvas(bg.w,bg.h);
@@ -62,7 +67,17 @@ function draw() {
    //draw user mouse
    noStroke();
    fill(user.rgb,user.rgb,user.rgb);
-   ellipse(mouseX,mouseY,user.size,user.size);
+   ellipse(x,y,user.size,user.size);
+
+   function keyPressed(){
+     if (keyCode=== UP_ARROW){
+       y = y-10;
+     }
+     else if (KeyCode===DOWN_ARROW){
+       y= y+10;
+     }
+     if (keyCode === LEFT_ARRO)
+   }
 
    //dot intersection
 
