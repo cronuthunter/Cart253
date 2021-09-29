@@ -11,7 +11,7 @@ let bg ={
    g:0,
    b:0,
    w:1000,
-   h:720,
+   h:710,
    };
 
  let covid19 ={
@@ -27,14 +27,14 @@ let bg ={
    rgb:250,
    };
 
-//elipse start
-var x = 200;
-var y = 200;
+
 ///////////////////
+
+
+
 function setup() {
    createCanvas(bg.w,bg.h);
    noCursor();
-
    //set the value ONCE at the start
    covid19.y=random(720);
    };
@@ -52,6 +52,8 @@ function draw() {
        };
 
    //move and draw covid
+
+
    covid19.x=covid19.x+covid19.speed;
      if(covid19.x>=bg.w){
        covid19.x=0;
@@ -61,23 +63,14 @@ function draw() {
      };
 
    noStroke();
-   fill(covid19.r,0,0);
+   fill(229,204,255);
    ellipse(covid19.x,covid19.y,covid19.size,covid19.size);
 
    //draw user mouse
    noStroke();
-   fill(user.rgb,user.rgb,user.rgb);
-   ellipse(x,y,user.size,user.size);
+   fill(0,204,0);
+   ellipse(mouseX,mouseY,user.size,user.size);
 
-   function keyPressed(){
-     if (keyCode=== UP_ARROW){
-       y = y-10;
-     }
-     else if (KeyCode===DOWN_ARROW){
-       y= y+10;
-     }
-     if (keyCode === LEFT_ARRO)
-   }
 
    //dot intersection
 
@@ -87,9 +80,11 @@ function draw() {
 
      fill(250);
      textAlign(CENTER);
-     textSize(50);
-     text('Covid Touch! EW! Your Score:'+ covid19.speed,bg.w/2,bg.h/2)
+     textSize(40);
+     text("You're FIRED From NASA, your final paycheck: $"+ covid19.speed,bg.w/2,bg.h/2)
    };
+
+
 
    console.log(d);
    }
