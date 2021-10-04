@@ -20,24 +20,22 @@ let circle2={
   speed:3
 };
 
-let state = 'title';
-////////////////
+let state = 'title'; // start with title, mouse click will change it to simulation then output love or sadness
+////////////////main//////////////////////////////
 
 function setup() {
 createCanvas(500,500);
-
 setupCircles();
-
 }
 
 function setupCircles(){
   //position circles set seprate from each other
   circle1.x=width/3;
   circle2.x=2 * width / 3;
+
   //start circles moving in a random direction
   circle1.vx = random(-circle1.speed, circle1.speed);
   circle2.vx = random(-circle2.speed, circle2.speed);
-
   circle1.vy = random(-circle1.speed, circle1.speed);
   circle2.vy = random(-circle2.speed, circle2.speed);
 }
@@ -45,9 +43,8 @@ function setupCircles(){
 ///
 function draw() {
   background(0);
-  //simulation();
 
-  if (state ==='title') {
+  if (state === 'title') {
     title();
   }
 
@@ -55,11 +52,11 @@ function draw() {
     simulation();
   }
 
-  else if (state === love) {
+  else if (state === 'love') {
     love();
   }
 
-  else if (state === sadness) {
+  else if (state === 'sadness') {
     sadness();
   }
 }
