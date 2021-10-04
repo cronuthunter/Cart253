@@ -42,11 +42,10 @@ function setupCircles(){
   circle2.vy = random(-circle2.speed, circle2.speed);
 }
 
-
-
+///
 function draw() {
   background(0);
-  simulation();
+  //simulation();
 
   if (state ==='title') {
     title();
@@ -57,24 +56,45 @@ function draw() {
   }
 
   else if (state === love) {
+    love();
   }
 
   else if (state === sadness) {
+    sadness();
   }
-
 }
 
 function title() {
+  push();
   textSize(64);
   fill(200,100,100);
   textAlign(CENTER,CENTER);
   text('LOVE?', width/2,height/2);
+  pop();
 }
 function simulation(){
   move();
   checkOffScreen();
   checkOverlap();
   display();
+}
+
+function love(){
+  push();
+  textSize(64);
+  fill(255,0,0);
+  textAlign(CENTER,CENTER);
+  text('LOVE!<3', width/2,height/2);
+  pop();
+}
+
+function sadness(){
+  push();
+  textSize(64);
+  fill(150,150,255);
+  textAlign(CENTER,CENTER);
+  text('not a match:(', width/2,height/2);
+  pop();
 }
 
 function move(){
@@ -89,7 +109,7 @@ function checkOffScreen(){
   //check if circles have gone off screen
 
   if (circle1.x<0 || circle1.x>width || circle1.y<0 || circle1.y>height || circle2.x<0 || circle2.x>width || circle2.y<0 || circle2.y>height){
-    //sad ending
+    state = 'sadness';
   }
 }
 
@@ -97,7 +117,7 @@ function checkOverlap(){
   // check if circles overlap
   let d= dist(circle1.x, circle1.y,circle2.x, circle2.y);
   if (d < circle1.size/2 + circle2.size/2) {
-    //happy ending
+    state = 'love';
   }
 }
 
