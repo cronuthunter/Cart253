@@ -30,23 +30,22 @@ createCanvas(500,500);
 setupCircles();
 
 
+
+
 function setupCircles(){
   //position circles set seprate from each other
   circle1.x=width/3;
   circle2.x=2 * width / 3;
-
+  circle2.speed=random(1,5);
   //start circles moving in a random direction
-  //circle1.vx = random(-circle1.speed, circle1.speed);
   circle2.vx = random(-circle2.speed, circle2.speed);
-  //circle1.vy = random(-circle1.speed, circle1.speed);
   circle2.vy = random(-circle2.speed, circle2.speed);
+  }
 }
 
 ///
 function draw() {
   background(0);
-
-
 
   if (state === 'title') {
     title();
@@ -63,6 +62,11 @@ function draw() {
   else if (state === 'sadness') {
     sadness();
   }
+
+  d = int(dist(circle1.x, circle1.y, circle2.x, circle2.y));
+          if(d < 150){
+            fastCirc();
+          };
 }
 
 function title() {
@@ -71,13 +75,15 @@ function title() {
   fill(200,100,100);
   textAlign(CENTER,CENTER);
   text('LOVE?', width/2,height/2);
+  textSize(30);
+  text('Press any key to start', width/2 , height/1.5);
   pop();
 }
 function simulation(){
   move();
   checkOffScreen();
   checkOverlap();
-  handleDragging();
+  userKeys();
   display();
 }
 
@@ -130,40 +136,29 @@ function display(){
   ellipse(circle2.x,circle2.y, circle2.size);
 }
 
-function mousePressed(){
+function keyPressed(){
   if (state === 'title'){
     state = 'simulation';
   }
-  else if (mouseIsInsideCirc()) {
-    circle1.beingDragged=true;
-  }
 }
 
-function mouseIsInsideCirc(){
-  let d=dist(mouseX,mouseY, circle1.x, circle1.y);
-  if (d< circle1.size/2){
-    return true;
-  }
-    else {
-      return false;
-    }
-  }
 
-
-function handleDragging(){
-  if (circle1.beingDragged===true){
-    circle1.x = mouseX;
-    circle1.y = mouseY;
-  }
+function fastCirc(){
+  circle2.vy = circle2.vy + random(-5,5);
+  circle2.vx =  circle2.vx + random(-5,5)
 }
 
-function mouseReleased() {
-  // If the shape is currently being dragged
-  // and they've "dropped it" on the right side of the line
-  if (circle1.beingDragged && circle1.x > width / 2) {
-  }
-  else {
-    circle1.beingDragged = false;
-
-  }
+function userKeys (){
+if (keyIsDown(LEFT_ARROW)){
+    circle1.x -= circle1.speed
+        };
+if (keyIsDown(RIGHT_ARROW)){
+    circle1.x += circle1.speed
+        };
+if (keyIsDown(UP_ARROW)){
+    circle1.y -= circle1.speed
+        };
+if (keyIsDown(DOWN_ARROW)){
+    circle1.y += circle1.speed
+        };
 }
