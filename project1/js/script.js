@@ -29,11 +29,11 @@ var left= parseInt(window.getComputedStyle(player).getPropertyValue("left"));
   else if (e.key=="ArrowRight" && left >= 460) {
     player.style.left=left+10+"px";
   }
-  if ((e.key= "ArrowUp" || e.keyCode == 32) {
+  if (e.key= "ArrowUp" || e.keyCode == 32) {
     var bullet = document.createElement("div");
     screen.appendChild(bullet);
     //bullets
-    var moveBullet = setInterval(()=>
+    var moveBullet = setInterval(()=> {
       //destroying zombies
       var zombie = document.getElementsByClassName('zombie');
       for (var i=0;i<zombie.length;i++){
@@ -42,29 +42,25 @@ var left= parseInt(window.getComputedStyle(player).getPropertyValue("left"));
         var zombieBound = zombie.getBoundingClientRect();
         var bulletBound = bullet.getBoundingClientRect();
 
-        if (bulletBound.left >= zombieBound.left && bulletBound.right >= zombieBound.right
-         bulletBound.top <= zombieBound.top && bulletBound.bottom <= zombieBound.bottom){
+        if (bulletBound.left >= zombieBound.left && bulletBound.right >= zombieBound.right && bulletBound.top <= zombieBound.top && bulletBound.bottom <= zombieBound.bottom){
            zombie.parentElement.removeChild(zombie); //removes hit zombie
-
-         }
-       }
-
-      }
-
-      var bulletBottom = parseInt(window.getComputedStyle(bullet).getPropertyValue("bottom"));
-    );
+         }//closes if
+       }//for loop
+     //set interval
+    var bulletBottom = parseInt(window.getComputedStyle(bullet).getPropertyValue("bottom"));
+    //keeps bullet inside screen
     if (bulletBottom >= 500){
       clearInterval(moveBullet);
     }
-    bullet.style.left=left + "px";
+    bullet.style.left=left + "px"; //shoots bullet from top of the jet
     bullet.style.bottom = bulletBottom + 3 + "px";
-    },50);
+    });
   }
 });
 
 function simulation() {
 
-  var generateZombie = setInterval())=>{
+  var generateZombie = setInterval(()=>{
     var zombie = document.createElement("div");
     zombie.classList.add("zombie");
     //zombie appears ramdomly between 0 + 460
