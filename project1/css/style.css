@@ -12,7 +12,7 @@ Also hides overflow.
 body {
   width: 100%;
   overflow: hidden;
-  /*background:url();*/
+  background:url("bg.jpg");
   background-size: cover;
 }
   #screen{
@@ -29,7 +29,7 @@ body {
   position: absolute;
   width: 40px
   height:40px;
-  /*background: url();*/
+  background: url("player.png");
   background-size: contain;
   background-repeat: no-repeat;
   left: 50%
@@ -42,7 +42,7 @@ body {
   left: 50px;
   width:30px;
   height: 30px;
-  /*background: url();*/
+  background: url("bullet.png");
   background-size: contain;
   background-repeat: no-repeat;
 
@@ -53,7 +53,7 @@ body {
   top: 0px;
   width:50px;
   height: 50px;
-  /*background: url();*/
+  background: url("Zombie.png");
   background-size: contain;
   background-repeat: no-repeat;
 

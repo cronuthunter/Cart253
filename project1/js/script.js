@@ -47,12 +47,15 @@ var left= parseInt(window.getComputedStyle(player).getPropertyValue("left"));
            zombie.parentElement.removeChild(zombie); //removes hit zombie
 
          }
-
+       }
 
       }
 
       var bulletBottom = parseInt(window.getComputedStyle(bullet).getPropertyValue("bottom"));
     );
+    if (bulletBottom >= 500){
+      clearInterval(moveBullet);
+    }
     bullet.style.left=left + "px";
     bullet.style.bottom = bulletBottom + 3 + "px";
     },50);
@@ -80,10 +83,15 @@ function simulation() {
         var zombie=zombie[i]
         var zomTop = parseInt(
         window.getComputedStyle(zombie).getPropertyValue("top"));
-        zombie.style.top=zomTop + 20 + "px";
+
+        if(zomTop >= 475){
+          ///switch states
+        }
+
+        zombie.style.top=zomTop + 25 + "px";
 
       }
     }
-  }, 450);
+  }, 100);
 
 }//sim end
