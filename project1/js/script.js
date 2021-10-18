@@ -1,9 +1,13 @@
 /**
-Title of Project
-Author Name
+Zombie Simulation, Project 1 Cart253
+Claire Amirault
 
-This is a template. You must fill in the title,
-author, and this description to match your project!
+This is a zombie apocalypse simulation game. Player moves with the arrow keys and
+shoots the zombies with the space bar. The simulation is set in an abandon town
+overun by zombies and you must save your group from the heard.
+
+*all graphics done by me
+
 */
 
 "use strict";
@@ -23,6 +27,13 @@ var left= parseInt(window.getComputedStyle(player).getPropertyValue("left"));
   else if (e.key=="ArrowRight" && left >= 460) {
     player.style.left=left+10+"px";
   }
+  if ((e.key= "ArrowUp" || e.keyCode == 323)){
+    var bullet = document.createElement("div");
+    screen.appendChild(bullet);
+
+    var moveBullet = setInterval(()=>
+    var bulletBottom = parseInt(window.getComputedStyle(player)).getPropertyValue("left"));
+  },50);
 });
 
 function simulation() {
@@ -53,35 +64,3 @@ function simulation() {
   }, 450);
 
 }//sim end
-
-
-
-
-
-
-
-
-
-
-/**
-Description of preload
-*/
-function preload() {
-
-}
-
-
-/**
-Description of setup
-*/
-function setup() {
-
-}
-
-
-/**
-Description of draw()
-*/
-function draw() {
-
-}
