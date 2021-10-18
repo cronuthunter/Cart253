@@ -10,13 +10,10 @@ Also hides overflow.
 **********************************************/
 
 body {
-  padding: 0;
-  margin: 0;
-  display: grid; /* Set up the grid and justify/align to center */
-  justify-content: center;
-  align-content: center;
-  height: 100vh; /* Body is the height of the viewport */
-  overflow: hidden; /* Hide anything that goes off the window size */
+  width: 100%;
+  overflow: hidden;
+  /*background:url();*/
+  background-size: cover;
 }
   #screen{
     position: relative;
@@ -25,6 +22,7 @@ body {
     margin: 40px auto;
     border: 2px;
     background-color: #FFFFFF;
+    overflow: hidden;
   }
 
 #player{
@@ -38,7 +36,19 @@ body {
   bottom: 0px;
 }
 
-#zombie{
+.bullet{
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+  width:30px;
+  height: 30px;
+  /*background: url();*/
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+
+.zombie{
   position: absolute;
   top: 0px;
   width:50px;
