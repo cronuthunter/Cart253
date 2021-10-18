@@ -29,7 +29,7 @@ var left= parseInt(window.getComputedStyle(player).getPropertyValue("left"));
   else if (e.key=="ArrowRight" && left >= 460) {
     player.style.left=left+10+"px";
   }
-  if (e.key= "ArrowUp" || e.keyCode == 32) {
+  if (e.key=="ArrowUp" || e.keyCode == 32) {
     var bullet = document.createElement("div");
     screen.appendChild(bullet);
     //bullets
