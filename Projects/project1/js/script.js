@@ -8,13 +8,14 @@ program complexity:
 - draw on canvas
 -save image of canvas
 -change canvas background
+-change stroke size
 -
 */
 //varibles
 
 
 "use strict";
-let state='simulation';
+let state='geometric';
 
 
 function preload() {
@@ -39,8 +40,12 @@ if (state==='title'){
   title();
 }
 
-else if (state==='simulation') {
-  simulation1();
+else if (state==='symmetric') {
+  symmetric();
+}
+
+else if (state==='geometric'){
+  geometric();
 }
 
 }//end draw
@@ -56,9 +61,9 @@ function title() {
 }
 
 
-function simulation1(){
+function symmetric(){
 if(mouseIsPressed==true){
-  stroke(mouseX,0,mouseY);
+  stroke(mouseX,0,mouseY);//colour changing
   strokeWeight(20);
   point(mouseX-5,mouseY-5);
   point(mouseX*-1+600, mouseY-5);
@@ -66,4 +71,18 @@ if(mouseIsPressed==true){
   point(mouseX-5,mouseY*-1+400);
 
 }
-}//end simulation
+}//end symmetric
+
+function geometric(){
+  if(mouseIsPressed==true){
+  stroke(mouseX,0,mouseY);
+  strokeWeight(0.5);
+  line(0,0, mouseX, mouseY);
+  line(600, 600, mouseX, mouseY);
+  line(600,0,mouseX,mouseY);
+  line(0,400,mouseX,mouseY);
+
+
+
+  }
+}
