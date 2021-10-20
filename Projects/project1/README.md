@@ -1,3 +1,1 @@
-# Template p5 project
-
-This is the README file for the entire project. For more official projects you should write information here about the nature of the project, your name, any special explanations of how the project works, etc.
+This program is a Zen Art Studio program. The pandemic raised 2 pain points relating to the subject. A) I really miss art studios, (I haven't been in 1 in almost 3 years!!!) and B) inspiration is hard to find, especially during the pandemic. Zen Art Studio should be used as a warm up before art making to get your mind primed and present for making meaningful mark making. 
