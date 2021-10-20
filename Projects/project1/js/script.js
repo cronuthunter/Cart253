@@ -2,14 +2,16 @@
 Gather Simulation
 Claire Amirault
 
-Art Studio Simulation!
+Zen Art Studio Simulation!
 -----------------------------------
 program complexity:
 - draw on canvas
--save image of canvas
--change canvas background
--change stroke size
--
+-draw on canvas in an intersting way
+x save image of canvas
+x change canvas background
+x change stroke size
+- add Audio
+
 */
 //varibles
 
@@ -17,7 +19,11 @@ program complexity:
 //
 "use strict";
 let state='title';
+var audio = new Audio ('js/music.mp3');
 
+function myAudio(){
+audio.play();
+}
 
 function preload() {
 
@@ -27,34 +33,23 @@ function preload() {
 /**
 Description of setup
 */
-
-
 function setup() {
 createCanvas(1000,700);
-
 }
-
-
 /**
 Description of draw()
 */
 function draw(){
-
-
 if (state==='title'){
   title();
 }
-
 else if (state==='symmetric') {
   symmetric();
 }
-
 else if (state==='geometric'){
   geometric();
 }
-
 }//end draw
-
 
 function title() {
   push();
