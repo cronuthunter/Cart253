@@ -14,8 +14,9 @@ program complexity:
 //varibles
 
 
+//
 "use strict";
-let state='geometric';
+let state='title';
 
 
 function preload() {
@@ -26,8 +27,11 @@ function preload() {
 /**
 Description of setup
 */
+
+
 function setup() {
-createCanvas(1024,768);
+createCanvas(1000,700);
+
 }
 
 
@@ -35,6 +39,7 @@ createCanvas(1024,768);
 Description of draw()
 */
 function draw(){
+
 
 if (state==='title'){
   title();
@@ -56,15 +61,20 @@ function title() {
   textSize(40);
   fill(200,100,100);
   textAlign(CENTER,CENTER);
-  text('Welcome to Art Studio Simulation!', width/2,height/2);
+  text('Welcome to Zen Art Studio Simulation!', width/2,height/3);
+  textSize(20);
+  text('press 1 for symmetric or 2 for geometric', width/2,height/2);
+  geoOrSym()
   pop();
 }
 
 
 function symmetric(){
+background("#ffffff09")
+
 if(mouseIsPressed==true){
-  stroke(mouseX,0,mouseY);//colour changing
   strokeWeight(20);
+  stroke(mouseX,0,mouseY);//colour changing
   point(mouseX-5,mouseY-5);
   point(mouseX*-1+600, mouseY-5);
   point(mouseX*-1+600, mouseY*-1+600);
@@ -74,6 +84,7 @@ if(mouseIsPressed==true){
 }//end symmetric
 
 function geometric(){
+  background('#ffffff09')
   if(mouseIsPressed==true){
   stroke(mouseX,0,mouseY);
   strokeWeight(0.5);
@@ -81,8 +92,20 @@ function geometric(){
   line(600, 600, mouseX, mouseY);
   line(600,0,mouseX,mouseY);
   line(0,400,mouseX,mouseY);
-
-
-
   }
+}
+
+function geoOrSym(){
+  if (state==="title"){
+    document.addEventListener('keydown', function(event) {
+      if(event.keyCode == 49) {
+          state='symmetric'
+      }
+      else if(event.keyCode == 50) {
+        state='geometric'
+
+      }
+  });
+  }
+
 }

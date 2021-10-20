@@ -18,3 +18,21 @@ body {
   height: 100vh; /* Body is the height of the viewport */
   overflow: hidden; /* Hide anything that goes off the window size */
 }
+
+
+}
+* {
+  margin:0px;
+  padding:0px;
+  box-sizing:border-box;
+}
+
+
+.actions {
+  flex:1;
+  text-align:right;
+}
+ .actions button {
+  padding:5px 10px;
+  cursor:pointer;
+}
