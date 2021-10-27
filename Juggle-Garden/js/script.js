@@ -29,7 +29,7 @@ x add a palm tree background
 let gravityForce = 0.0025;
 let paddle;
 let balls = [];
-let numBalls = 10;
+let numBalls = 5;
 
 let palmTree;
 
@@ -59,6 +59,8 @@ function setup() {
     let y = random(-400,-100);
     let ball = new Ball(x,y);
     balls.push(ball);
+
+
   }
 
 }
@@ -81,11 +83,11 @@ function draw() {
     juggle();
   }
 
-  else if (state === 'love') {
+  else if (state === 'yay') {
     yay();
   }
 
-  else if (state === 'sadness') {
+  else if (state === 'sad') {
     sad();
   }
 }//end of draw
@@ -95,22 +97,58 @@ function juggle(){
   paddle.move();
   paddle.display();
 
-  for (let i = 0; i < balls.length; i++) {
-    let ball = balls[i];
-    if (ball.active) {
-      ball.gravity(gravityForce);
-      ball.move();
-      ball.bounce(paddle);
-      ball.display();
+  // A variable to count how many active balls we find
+    // this frame
+    let numActiveBalls = 0;
+    // Loop through all the balls in the array
+    for (let i = 0; i < balls.length; i++) {
+      // Store the current ball in a variable
+      let ball = balls[i];
+      // Only update the ball if it's active
+      if (ball.active) {
+        // Since this is active, add one to our count
+        numActiveBalls++;
+        // Apply gravity, move, bounce, and display
+        ball.gravity(gravityForce);
+        ball.move();
+        ball.bounce(paddle);
+        ball.display();
+      }
     }
-  }
+
+setTimeout(activeBallCheck,3000);//give the balls a chance to fall
+
+  function activeBallCheck(){
+    if (numActiveBalls <=3) {
+      state='yay';
+    }
+
+    if (numActiveBalls === 0) {
+      state='sad';
+    }
+  }//end ball check
+
+
+
 }//end juggle
 
-function checkBalls(){
-  if (ball.active=balls[0]){
-    state=sad;
-  }
-  else if(ball.active<=balls[5]){
-      state=yay;
-  }
-}//end check balls
+
+
+
+function yay(){
+  push();
+  textSize(30);
+  fill(0);
+  textAlign(CENTER,CENTER);
+  text("YAY! monkey doesn't need to UberEats tonight!", width/2,height/2);
+  pop();
+}//end of yay
+
+function sad(){
+  push();
+  textSize(30);
+  fill(0);
+  textAlign(CENTER,CENTER);
+  text("You made monkey hangry!!! >:(", width/2,height/2);
+  pop();
+}//end of sad

@@ -8,7 +8,18 @@ class Paddle {
   }
 
   move() {
-    this.x = mouseX;
+    keyPressed() {
+  if (keyCode === UP_ARROW) {
+    y = y - 10;
+  } else if (keyCode === DOWN_ARROW) {
+   y = y + 10;
+  }
+  if (keyCode === LEFT_ARROW) {
+    x = x - 5;
+  } else if (keyCode === RIGHT_ARROW) {
+    x = x + 5;
+  }
+  
   }
 
   display() {
