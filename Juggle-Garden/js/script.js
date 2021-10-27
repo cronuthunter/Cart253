@@ -29,7 +29,9 @@ x add a palm tree background
 let gravityForce = 0.0025;
 let paddle;
 let balls = [];
+let badBalls = [];
 let numBalls = 5;
+let numBallsBad = 1;
 
 let palmTree;
 
@@ -60,13 +62,9 @@ function setup() {
     let ball = new Ball(x,y);
     balls.push(ball);
 
-
   }
-
 }
-function title(){
 
-}
 
 /**
 Description of draw()
@@ -114,9 +112,15 @@ function juggle(){
         ball.bounce(paddle);
         ball.display();
       }
-    }
+
+
+
+
+
+    }//end juggle
 
 setTimeout(activeBallCheck,3000);//give the balls a chance to fall
+//if after 3 seconds user has ball, yay!
 
   function activeBallCheck(){
     if (numActiveBalls <=3) {
