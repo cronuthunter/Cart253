@@ -27,4 +27,12 @@ class Ball{
       this.vy = -this.vy;
   }
 
+  display(){
+    push();
+    noStroke();
+    fill(this.fill.r,this.fill.g,this.fill.b);
+    ellipse(this.x,this.y,this.size);
+    pop();
+  }
+
 }//end ball class
