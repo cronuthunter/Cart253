@@ -12,5 +12,19 @@ class Ball{
     this.speed=3;
     this.vx= random(-this.speed,this.speed);
     this.vy=random(-this.speed,this.speed);
+    }
+  move(){
+    this.x += this.vx;
+    this.y += this.yy;
   }
-}
+
+  bounce(){
+    //physics of the bouce + check edge instead of center
+    if (this.x - this.size/2 <0 || this.x + this.size/2 > width){
+      this.vx = -this.vx;
+    }
+    if (this.y - this.size/2 <0 || this.y + this.size/2 > width){
+      this.vy = -this.vy;
+  }
+
+}//end ball class
