@@ -2,7 +2,7 @@
 Musical Toy
 
 Claire Amirault
-This is a musical toy program, a program that plays sound on primitive physics!
+A program that plays sound on primitive physics
 */
 
 "use strict";
@@ -33,6 +33,7 @@ function draw() {
     let ball = balls[i];
     ball.move();
     ball.bounce();
+    ball.disco();
     ball.display();
   }
 }// end of draw
@@ -40,6 +41,8 @@ function draw() {
 function mousePressed(){
   createBall(mouseX,mouseY);
 }
+
+
 
 function createBall(x,y) {
   let note = random(notes);

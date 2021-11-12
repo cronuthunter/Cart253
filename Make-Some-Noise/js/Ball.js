@@ -9,7 +9,7 @@ class Ball{
       g: random(200,255),
       b: random(200,255)
     }
-    this.speed=3;
+    this.speed=5;
     this.vx= random(-this.speed,this.speed);
     this.vy=random(-this.speed,this.speed);
 
@@ -41,13 +41,26 @@ class Ball{
     //physics of the bouce + check edge instead of center
     if (this.x - this.size/2 <0 || this.x + this.size/2 > width){
       this.vx = -this.vx;
+      //this.size=75;
       this.playNote();
     }
     if (this.y - this.size/2 <0 || this.y + this.size/2 > width){
       this.vy = -this.vy;
+      //this.size=75;
       this.playNote();
   }
 }
+
+  disco(){
+    let d= dist(this.x, this.y,this.x, this.y);
+    if (d < this.size/2 + this.size/2) {
+      this.fill = {
+        r: random(90,255),
+        g: random(90,255),
+        b: random(90,255)
+      }
+  }
+  }
   playNote() {
    this.synth.play(this.note,0.4,0,0.1);
  }
