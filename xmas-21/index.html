@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+
+    <title>xmas!</title>
+    <style>
+      * {
+          box-sizing: border-box;
+      }
+
+      a:link {
+          color: #E3FBD9;
+          text-decoration: none;
+      }
+
+      a:visited {
+          color: #E3FBD9;
+          text-decoration: none;
+      }
+
+      a:hover {
+          color: #E3FBD9;
+          text-decoration: none;
+       }
+
+      a:active {
+          color: #E3FBD9;
+          text-decoration: none;
+      }
+
+      body {
+          margin: 0;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          background-color: #00292a;
+      }
+
+
+
+      .header {
+          background-color: #E3FBD9;
+          font-size: large;
+          text-align: center;
+          padding: 32px;
+      }
+      /* Create three equal columns that floats next to each other */
+      .column {
+          float: left;
+          width: 33.33%;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+          content: "";
+          display: table;
+          clear: both;
+      }
+
+
+      .container {
+          position: relative;
+          width: 100%;
+        }
+
+        .image {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          transition: .5s ease;
+          background-color: #00292a;
+        }
+
+        .container:hover .overlay {
+          opacity: 1;
+        }
+
+        .text {
+          color: white;
+          font-size: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          text-align: center;
+}
+
+
+  </style>
+    <!-- CSS stylesheet(s) -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <!-- Library script(s) -->
+    <script src="js/libraries/p5.min.js"></script>
+    <script src="js/libraries/p5.sound.min.js"></script>
+
+    <!-- My script(s) -->
+    <script src="js/script.js"></script>
+  </head>
+
+  <body>
+    <div class="header">
+            <h1> Christmas List 2021</h1>
+        </div>
+
+
+    <!-- Photo Grid -->
+
+        <div class="column">
+          <!-- aritzia-->
+            <div class="container">
+                <img src="https://aritzia.scene7.com/is/image/Aritzia/large/f21_04_a03_90834_21342_on_a.jpg" class="image">
+                <div class="overlay">
+                  <div class="text"><a href="https://www.aritzia.com/en/mylist?wishListID=36523bdce10aed75cc10287c98">link</div>
+                </div>
+              </div>
+               <!-- jazz club-->
+              <div class="container">
+                <img src="https://www.sephora.com/productimages/sku/s2326114-main-zoom.jpg?imwidth=630" class="image">
+                <div class="overlay">
+                  <div class="text"><a href="https://www.sephora.com/ca/en/product/voluspa-baltic-amber-glass-candle-P462415?skuId=2326114">link</div>
+                </div>
+              </div>
+
+              <!-- milk-->
+            <div class="container">
+                <img src="https://cdn.shopify.com/s/files/1/0526/6505/7434/products/76012_OI_Milk_135ml_Davines_34bd2761-2ccc-4355-8e8d-52761879e5d2_2000x.jpg?v=1625842900" class="image">
+                <div class="overlay">
+                  <div class="text"><a href="https://ca.davines.com/products/oi-all-in-one-milk">link</div>
+                </div>
+              </div>
+              <!-- ysl primer-->
+              <div class="container">
+                  <img src="https://www.sephora.com/productimages/sku/s1713114-main-zoom.jpg?imwidth=630" class="image">
+                  <div class="overlay">
+                    <div class="text"><a href="https://www.sephora.com/ca/en/product/touche-eclat-blur-primer-P397615?skuId=1713114&icid2=skugrid:p397615:product">link</div>
+                  </div>
+                </div>
+        </div>
+
+        <!-- start of middle colum-->
+        <!--gold chain-->
+        <div class="column">
+            <div class="container">
+                <img src="https://n.nordstrommedia.com/id/sr3/705c1f21-4285-460e-98d2-7e17b818b562.jpeg?crop=pad&pad_color=FFF&format=jpeg&w=780&h=1196&dpr=2" class="image">
+                <div class="overlay">
+                  <div class="text"><a href="https://www.nordstrom.ca/s/bony-levy-14k-gold-chain-bracelet-necklace-set-nordstrom-exclusive/6523091?origin=category-personalizedsort&breadcrumb=Home%2FBrands%2FBony%20Levy&color=710">link</div>
+                </div>
+              </div>
+
+              <!-- bag-->
+          <div class="container">
+                <img src="https://cdn.shopify.com/s/files/1/0046/5548/0950/products/STEVEMADDEN-BOOTS_BRENNA_BLACK_SIDE_grande.jpg?v=1629922321" class="image">
+                <div class="overlay">
+                  <div class="text"><a href="https://www.stevemadden.ca/products/brenna-black?ref=isp_rel_prd&isp_ref_pos=1">link</div>
+                </div>
+              </div>
+
+              <!-- tom ford-->
+            <div class="container">
+                  <img src="https://www.sephora.com/productimages/sku/s1602259-main-zoom.jpg?imwidth=630" class="image">
+                  <div class="overlay">
+                    <div class="text"><a href="https://www.sephora.com/ca/en/product/replica-jazz-club-P385350?country_switch=ca&skuId=1602259&om_mmc=ppc-GG_2024543034_70610902494_pla-419820033283_1602259_354742832631_9000404_c&gclid=Cj0KCQiA4b2MBhD2ARIsAIrcB-TSXwGvYoGe9KsGyUl60ts8ncQi8WodUD7alYPYS3sn4sTCYNYXsX4aAkTaEALw_wcB&gclsrc=aw.ds">link</div>
+                  </div>
+                </div>
+
+                <!-- flawless filter-->
+                <div class="container">
+                    <img src="https://cdn.shopify.com/s/files/1/0325/6569/0501/products/FW21-Purity-Hyde-Black-3_1400x.jpg?v=1623265500" class="image">
+                    <div class="overlay">
+                      <div class="text"><a href="https://mattandnat.com/products/hyde-vegan-tote-bag-purity">link</div>
+                    </div>
+                  </div>
+        </div>
+
+
+
+
+        <!-- start of end colum-->
+        <!-- screenplay-->
+        <div class="column">
+          <div class="container">
+                <img src="https://cdn.accentuate.io/6643821969457/1633323404464/20210919_A24_LadyBird_ScreenplayBook_2214-tight-gray.jpg?v=0%20https://cdn.accentuate.io/6643821969457/1633323404464/20210919_A24_LadyBird_ScreenplayBook_2214-tight-gray.jpg?v=0%20https://cdn.accentuate.io/6643821969457/1633323404464/20210919_A24_LadyBird_ScreenplayBook_2214-tight-gray.jpg?v=0" class="image">
+                <div class="overlay">
+                  <div class="text"><a href="https://shop.a24films.com/products/lady-bird-screenplay-book">link</div>
+                </div>
+              </div>
+
+            <!-- no image-->
+          <div class="container">
+                <img src="https://cdn.shopify.com/s/files/1/1176/4004/products/IMG_1020_96fabdca-e745-4fcf-8947-01d21c11fe45_2048x2048.jpg?v=1632257575" class="image">
+                <div class="overlay">
+                  <div class="text"><a href="https://vanessamooney.com/collections/the-elisabeth-dress-all/products/the-elisabeth-romper-dress-black-satin?variant=32985782878243">link</div>
+              </div>
+            </div>
+
+            <!-- sheertex-->
+            <div class="container">
+                <img src="https://cdn.shopify.com/s/files/1/0114/4120/9408/products/20200805-PDP-Size-XS-Day-3-072Edit2small_620x.jpg?v=1617068521" class="image">
+                <div class="overlay">
+                  <div class="text"><a href="https://www.sheertex.com/collections/thigh-high-pantyhose/products/thigh-high-sheer-tights">link</div>
+              </div>
+              </div>
+
+              <!-- highlighter-->
+              <div class="container">
+                  <img src="https://www.sephora.com/productimages/sku/s2424828-main-zoom.jpg?imwidth=630" class="image">
+                  <div class="overlay">
+                    <div class="text"><a href="https://www.sephora.com/ca/en/product/giorgio-armani-beauty-fluid-sheer-glow-enhancer-highlighter-P469835?skuId=2424828&keyword=armani%20highlighter">link</div>
+                  </div>
+                </div>
+
+        </div>
+
+  </body>
+
+</html>

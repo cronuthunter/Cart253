@@ -1,0 +1,98 @@
+/*********************************************
+
+Here is a description of any special CSS used.
+In this case it's just padding and margin to 0
+and then centring the canvas (and anything else)
+using the CSS Grid.
+
+Also hides overflow.
+
+**********************************************/
+
+h1{
+    color: #E3FBD9;
+    background-color: #00292a;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+button{
+  text-align: left;
+}
+
+body{
+    color: #00292a;
+    background-color:#E3FBD9;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+div.textbox {
+  color: #E3FBD9;
+  background-color: #00292a;
+  text-align: left;
+}
+
+img#ph1{
+  position: absolute;
+
+}
+
+img#ph2{
+  position: absolute;
+
+}
+
+img#ph3{
+  position: absolute;
+
+}
+
+img#ph4{
+  position: absolute;
+
+}
+
+img#body{
+  position: relative;
+}
+
+
+div.dropdown{
+  display: flex;
+  justify-content: space-between;
+  background: #FF7F50;
+  z-index: 1;
+}
+
+li.dropitem{
+  display:inline;
+  margin-left: 30px;
+  margin-right: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+li.dropitem:hover ul.droplist{
+  display: flex;
+  flex-direction: column;
+}
+
+ul.droplist {
+  background-color: #FF7F50;
+  position: absolute;
+  left: -40px;
+  z-index: 1;
+  display: none;
+  list-style: none;
+  width: 200px;
+}
