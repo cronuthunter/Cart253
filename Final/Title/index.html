@@ -6,8 +6,8 @@
 
     <title>Holiday Card Sim!</title>
 
-    <!-- CSS stylesheet(s) -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- CSS stylesheet(s)
+    <link rel="stylesheet" type="text/css" href="css/style.css" />-->
 
     <!-- Library script(s) -->
     <script src="js/libraries/p5.min.js"></script>
@@ -15,11 +15,66 @@
 
     <!-- My script(s) -->
     <script src="js/script.js"></script>
+    <style>
+      body{
+        background-image: url("css/snowbg.gif");
+        background-repeat: no-repeat;
+        background-size: 1800px 1000px;
+        justify-content: center;
+      }
+      h1{
+        justify-content: center;
+        padding: 15px 100px;
+        color: #730906;
+        background-color: #FDF1F1 ;
+        margin-top: 50px;
+        font-family: Arial;
+
+
+      }
+      h2{
+        justify-content: center;
+        padding: 15px 100px;
+        color: #730906;
+        background-color: #FDF1F1 ;
+        font-family: Arial;
+
+      }
+
+      button{
+        background-color: #730906; /* red */
+        border: none;
+        color: #FFFFFF;
+        padding: 15px 50px;
+
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        justify-content: center;
+        vertical-align: top;
+        margin: 20px;
+        margin-left: 90px;
+        margin-top: 200px;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+
+      button:hover {
+        background-color: #FDF1F1;
+        color: #730906;
+      }
+    </style>
   </head>
 
   <body>
+    <audio loop autoplay>
+      <source src="css/title.mp3" type="audio/mpeg">
+    </audio>
     <h1>Welcome to Holiday Card Simulator!</h1>
     <h2>Drag and drop your face into your holiday card to share with your friends and family!</h2>
+
     <!-- links to a new html file for each card -->
     <button onclick="window.location.href='https://cronuthunter.github.io/Cart253/Final/index2/';">
       Click Here For a 2 Person Card!
