@@ -11,7 +11,7 @@ var dragValue;
 
 //
 
-function move(){
+function move(){//all function are in move() becuase it is called at the begining of the HTML w onload
   face1();
   face2();
   face3();
@@ -25,6 +25,12 @@ function move(){
   face11();
   face12();
   face13();
+  //
+  holi1();
+  holi2();
+  holi3();
+  holi4();
+
 
 //drops face at a postion when mouse is released.
   document.onmouseup=function(e){
@@ -48,8 +54,8 @@ function move(){
 //f1
 function face1(id){
   var f1 = document.getElementById('f1');
-  f1.style.right="1300px";
-  f1.style.top="720px";
+  f1.style.right="1300px"; // aligned elements to left of the screen
+  f1.style.top="720px";// aligned elements down the screen
   f1.style.position= "absolute";
   f1.onmousedown= function(){
     dragValue = f1;
@@ -161,5 +167,42 @@ function face13(id){
   f13.style.position= "absolute";
   f13.onmousedown= function(){
     dragValue = f13;
+  }
+}
+////holiday grettings
+function holi1(id){
+  var xmas = document.getElementById('xmas');
+  xmas.style.left="1300px";
+  xmas.style.top="30px";
+  xmas.style.position= "absolute";
+  xmas.onmousedown= function(){
+    dragValue = xmas;
+  }
+}
+function holi2(id){
+  var hanu = document.getElementById('hanu');
+  hanu.style.left="1300px";
+  hanu.style.top="110px";
+  hanu.style.position= "absolute";
+  hanu.onmousedown= function(){
+    dragValue = hanu;
+  }
+}
+function holi3(id){
+  var kwan = document.getElementById('kwan');
+  kwan.style.left="1300px";
+  kwan.style.top="190px";
+  kwan.style.position= "absolute";
+  kwan.onmousedown= function(){
+    dragValue = kwan;
+  }
+}
+function holi4(id){
+  var holi = document.getElementById('holi');
+  holi.style.left="1300px";
+  holi.style.top="270px";
+  holi.style.position= "absolute";
+  holi.onmousedown= function(){
+    dragValue = holi;
   }
 }
