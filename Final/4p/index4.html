@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      width="device-width,"
+      initial-scale="1.0,"
+      maximum-scale="1.0,"
+      user-scalable="0"
+    />
 
     <title>Holiday Card Sim!</title>
 
@@ -15,13 +21,160 @@
 
     <!-- My script(s) -->
     <script src="js/script.js"></script>
+
+    <style>
+      body {
+        background-image: url("assets/4people.jpg");
+        background-repeat: no-repeat;
+        background-size: 1500px 900px;
+      }
+    </style>
   </head>
 
-  <body>
-    <h1>Welcome to Holiday Card Simulator!</h1>
-    <h2>Drag and drop your face into your holiday card to share with your friends and family!</h2>
+  <body onload="move()">
+    <!-- calls move function when the page is loaded -->
+    <audio loop autoplay>
+      <source src="assets/index4.mp3" type="audio/mpeg">
+    </audio>
+    <!-- defining each face photo and giving it an ID -->
+    <div class="float-container">
+      <div class="1c">
+        <img
+          class="person1"
+          src="assets/person1.png"
+          id="f1"
+          width="100px"
+          height="100px"
+        />
 
-    <button type="button" onclick="">Click Me!</button>
+        <img
+          class="person2"
+          src="assets/person2.png"
+          id="f2"
+          width="100px"
+          height="100px"
+        />
+
+        <img
+          class="person3"
+          src="assets/person3.png"
+          id="f3"
+          width="100px"
+          height="100px"
+        />
+
+        <img
+          class="person4"
+          src="assets/person4.png"
+          id="f4"
+          width="100px"
+          height="100px"
+        />
+
+        <img
+          class="person5"
+          src="assets/person5.png"
+          id="f5"
+          width="100px"
+          height="100px"
+        />
+
+        <img
+          class="person6"
+          src="assets/person6.png"
+          id="f6"
+          width="100px"
+          height="100px"
+        />
+
+        <img
+          class="person7"
+          src="assets/person7.png"
+          id="f7"
+          width="100px"
+          height="100px"
+        />
+      </div>
+
+      <div class="2c">
+        <img
+          class="person8"
+          src="assets/person8.png"
+          id="f8"
+          width="100px"
+          height="100px"
+        />
+
+        <img
+          class="person9"
+          src="assets/person9.png"
+          id="f9"
+          width="100px"
+          height="100px"
+        />
+
+        <img
+          class="person10"
+          src="assets/person10.png"
+          id="f10"
+          width="100px"
+          height="100px"
+        />
+
+        <img
+          class="person11"
+          src="assets/person11.png"
+          id="f11"
+          width="100px"
+          height="100px"
+        />
+
+        <img
+          class="person12"
+          src="assets/person12.png"
+          id="f12"
+          width="100px"
+          height="100px"
+        />
+
+        <img
+          class="person13"
+          src="assets/perosn13.png"
+          id="f13"
+          width="100px"
+          height="100px"
+        />
+  <!-- defining each holiday gretting and giving it an ID -->
+        <img
+          class="xmas"
+          src="assets/xmas.png"
+          id="xmas"
+          width="200px"
+          height="180px"
+          />
+        <img
+          class="hanu"
+          src="assets/hanu.png"
+          id="hanu"
+          width="200px"
+          height="180px"
+          />
+        <img
+          class="kwan"
+          src="assets/kwan.png"
+          id="kwan"
+          width="200px"
+          height="180px"
+          />
+        <img
+          class="holi"
+          src="assets/holi.png"
+          id="holi"
+          width="200px"
+          height="180px"
+          />
+
+      </div>
+    </div>
   </body>
-
 </html>
