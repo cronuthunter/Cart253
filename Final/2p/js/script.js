@@ -1,9 +1,9 @@
 /**
-Title of Project
-Author Name
+Claire Amirault
+Cart 253 - Project 2
 
-This is a template. You must fill in the title,
-author, and this description to match your project!
+This script file is responsible for all drag and drop
+actions.
 */
 
 "use strict";
