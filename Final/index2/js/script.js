@@ -25,7 +25,6 @@ function move(){
   face11();
   face12();
   face13();
-  face14();
 
 //drops face at a postion when mouse is released.
   document.onmouseup=function(e){
@@ -49,6 +48,8 @@ function move(){
 //f1
 function face1(id){
   var f1 = document.getElementById('f1');
+  f1.style.right="1300px";
+  f1.style.top="720px";
   f1.style.position= "absolute";
   f1.onmousedown= function(){
     dragValue = f1;
@@ -56,6 +57,8 @@ function face1(id){
 }//f2
 function face2(id){
   var f2 = document.getElementById('f2');
+  f2.style.right="1300px";
+  f2.style.top="660px";
   f2.style.position= "absolute";
   f2.onmousedown= function(){
     dragValue = f2;
@@ -63,13 +66,17 @@ function face2(id){
 }//f3
 function face3(id){
   var f3 = document.getElementById('f3');
+  f3.style.right="1300px";
+  f3.style.top="600px";
   f3.style.position= "absolute";
   f3.onmousedown= function(){
     dragValue = f3;
   }
 }//f4
 function face4(id){
-  var f2 = document.getElementById('f4');
+  var f4 = document.getElementById('f4');
+  f4.style.right="1300px";
+  f4.style.top="540px";
   f4.style.position= "absolute";
   f4.onmousedown= function(){
     dragValue = f4;
@@ -77,6 +84,8 @@ function face4(id){
 }//f5
 function face5(id){
   var f5 = document.getElementById('f5');
+  f5.style.right="1300px";
+  f5.style.top="480px";
   f5.style.position= "absolute";
   f5.onmousedown= function(){
     dragValue = f5;
@@ -84,6 +93,8 @@ function face5(id){
 }//f6
 function face6(id){
   var f6 = document.getElementById('f6');
+  f6.style.right="1300px";
+  f6.style.top="420px";
   f6.style.position= "absolute";
   f6.onmousedown= function(){
     dragValue = f6;
@@ -91,20 +102,26 @@ function face6(id){
 }//f7
 function face7(id){
   var f7 = document.getElementById('f7');
+  f7.style.right="1300px";
+  f7.style.top="360px";
   f7.style.position= "absolute";
   f7.onmousedown= function(){
     dragValue = f7;
   }
 }//f8
 function face8(id){
-  var f2 = document.getElementById('f8');
+  var f8 = document.getElementById('f8');
+  f8.style.right="1300px";
+  f8.style.top="300px";
   f8.style.position= "absolute";
   f8.onmousedown= function(){
     dragValue = f8;
   }
 }//f9
 function face9(id){
-  var f2 = document.getElementById('f9');
+  var f9 = document.getElementById('f9');
+  f9.style.right="1300px";
+  f9.style.top="240px";
   f9.style.position= "absolute";
   f9.onmousedown= function(){
     dragValue = f9;
@@ -112,6 +129,8 @@ function face9(id){
 }//f10
 function face10(id){
   var f10 = document.getElementById('f10');
+  f10.style.right="1300px";
+  f10.style.top="180px";
   f10.style.position= "absolute";
   f10.onmousedown= function(){
     dragValue = f10;
@@ -119,6 +138,8 @@ function face10(id){
 }//f11
 function face11(id){
   var f11 = document.getElementById('f11');
+  f11.style.right="1300px";
+  f11.style.top="120px";
   f11.style.position= "absolute";
   f11.onmousedown= function(){
     dragValue = f11;
@@ -126,6 +147,8 @@ function face11(id){
 }//f12
 function face12(id){
   var f12 = document.getElementById('f12');
+  f12.style.right="1300px";
+  f12.style.top="90px";
   f12.style.position= "absolute";
   f12.onmousedown= function(){
     dragValue = f12;
@@ -133,15 +156,10 @@ function face12(id){
 }//f13
 function face13(id){
   var f13 = document.getElementById('f13');
+  f13.style.right="1300px";
+  f13.style.top="30px";
   f13.style.position= "absolute";
   f13.onmousedown= function(){
     dragValue = f13;
-  }
-}//f14
-function face14(id){
-  var f14 = document.getElementById('f14');
-  f14.style.position= "absolute";
-  f14.onmousedown= function(){
-    dragValue = f14;
   }
 }
